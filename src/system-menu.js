@@ -1,6 +1,6 @@
 const { Menu } = require('electron')
 const desktopServerMenu = require('./desktop-server-menu.js')
-//const desktopMusicMenu = require('./desktop-music-menu.js')
+const desktopMusicMenu = require('./desktop-music-menu.js')
 
 /**
  * Sets and/or switches the current system menu. Automatically detects the
@@ -18,9 +18,9 @@ exports.set = (hydraApp, browserWindow, lang) => {
       menuObject = desktopServerMenu.get(browserWindow, lang)
       break
 
-    // case 'music':
-    //   menuObject = desktopMusicMenu.get(browserWindow, lang)
-    //   break
+    case 'music':
+      menuObject = desktopMusicMenu.get(browserWindow, lang)
+      break
   }
 
   let appMenu = new Menu.buildFromTemplate(menuObject)
