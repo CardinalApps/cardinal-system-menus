@@ -1,0 +1,17 @@
+{
+  "name": "hydra-system-menus",
+  "version": "0.1.0",
+  "author": "somebeaver",
+  "private": true,
+  "scripts": {
+    "test": "tap"
+  },
+  "devDependencies": {
+    "electron": "^7.3.1",
+    "hydra-test-tools": "github:somebeaver/hydra-test-tools",
+    "tap": "^14.11.0"
+  },
+  "dependencies": {
+    "hydra-i18n": "github:somebeaver/hydra-i18n"
+  }
+}
