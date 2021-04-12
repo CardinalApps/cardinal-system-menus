@@ -12,6 +12,7 @@
     "tap": "^14.11.0"
   },
   "dependencies": {
-    "hydra-i18n": "github:somebeaver/hydra-i18n"
+    "hydra-i18n": "github:somebeaver/hydra-i18n",
+    "hydra-updater": "github:somebeaver/hydra-updater"
   }
 }
