@@ -3,14 +3,13 @@ const desktopServerMenu = require('./desktop-server-menu.js')
 const desktopMusicMenu = require('./desktop-music-menu.js')
 
 /**
- * Sets and/or switches the current system menu. Automatically detects the
- * operating system.
+ * Returns a menu object.
  * 
  * @param {string} hydraApp - "server" | "music"
  * @param {BrowserWindow} browserWindow
  * @param {string} lang
  */
-exports.set = (hydraApp, browserWindow, lang) => {
+exports.get = (hydraApp, browserWindow, lang) => {
   let menuObject
 
   switch (hydraApp) {
@@ -22,6 +21,20 @@ exports.set = (hydraApp, browserWindow, lang) => {
       menuObject = desktopMusicMenu.get(browserWindow, lang)
       break
   }
+
+  return menuObject
+}
+
+/**
+ * Sets and/or switches the current system menu. Automatically detects the
+ * operating system.
+ * 
+ * @param {string} hydraApp - "server" | "music"
+ * @param {BrowserWindow} browserWindow
+ * @param {string} lang
+ */
+exports.set = (hydraApp, browserWindow, lang) => {
+  let menuObject = this.get(hydraApp, browserWindow, lang)
 
   let appMenu = new Menu.buildFromTemplate(menuObject)
   Menu.setApplicationMenu(appMenu)
