@@ -1,4 +1,4 @@
-const { shell } = require('electron')
+const { app, shell } = require('electron')
 const i18n = require('hydra-i18n')
 const { updater } = require('hydra-updater')
 
@@ -82,7 +82,7 @@ exports.getItems = (browserWindow, lang) => {
       'win32-accelerator-label': 'Ctrl+Q',
       'label': i18n.string('system-menu.quit', lang),
       'click': () => {
-        browserWindow.quit()
+        app.quit()
       }
     },
     // will capture back/forward for users that use bettertouchtool to remap mb4 and mb5 to cmd+[ and cmd+]
@@ -170,8 +170,8 @@ exports.getItems = (browserWindow, lang) => {
     },
     'toggleDevTools': {
       'id': 'toggleDevTools',
-      'accelerator': 'CmdOrCtrl+Alt+I',
-      'win32-accelerator-label': 'Ctrl+Alt+I',
+      'accelerator': 'CmdOrCtrl+Shift+I',
+      'win32-accelerator-label': 'Ctrl+Shift+I',
       'label': i18n.string('system-menu.toggle-dev-tools', lang),
       'click': () => {
         browserWindow.webContents.openDevTools()
