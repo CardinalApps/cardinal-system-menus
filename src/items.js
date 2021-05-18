@@ -170,8 +170,8 @@ exports.getItems = (browserWindow, lang) => {
     },
     'toggleDevTools': {
       'id': 'toggleDevTools',
-      'accelerator': 'CmdOrCtrl+Shift+I',
-      'win32-accelerator-label': 'Ctrl+Shift+I',
+      'accelerator': 'CmdOrCtrl+Alt+I',
+      'win32-accelerator-label': 'Ctrl+Alt+I',
       'label': i18n.string('system-menu.toggle-dev-tools', lang),
       'click': () => {
         browserWindow.webContents.openDevTools()
