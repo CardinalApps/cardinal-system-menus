@@ -69,11 +69,11 @@ exports.get = (browserWindow, lang) => {
         {...menuItems['about']},
         {...menuItems['sep']},
         {...menuItems['modal:welcome']},
-        {...menuItems['modal:learnMore']},
-        {...menuItems['modal:attributions']},
+        {...menuItems['link:website']},
+        {...menuItems['modal:openSource']},
         {...menuItems['sep']},
-        {...menuItems['modal:tac']},
-        {...menuItems['modal:pp']},
+        {...menuItems['link:tac']},
+        {...menuItems['link:pp']},
       ]
     }
   ]
@@ -140,10 +140,10 @@ exports.get = (browserWindow, lang) => {
     {
       'role': 'help',
       'submenu': [
-        {...menuItems['modal:attributions']},
+        {...menuItems['modal:openSource']},
         {...menuItems['sep']},
-        {...menuItems['modal:tac']},
-        {...menuItems['modal:pp']},
+        {...menuItems['link:tac']},
+        {...menuItems['link:pp']},
       ]
     }
   ]

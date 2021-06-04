@@ -255,32 +255,32 @@ exports.getItems = (browserWindow, lang) => {
         announce({'action': 'show-welcome'})
       }
     },
-    'modal:learnMore': {
-      'id': 'showLearnMore',
-      'label': i18n.string('system-menu.learn-more', lang),
+    'link:website': {
+      'id': 'websiteLink',
+      'label': i18n.string('system-menu.website', lang),
       'click': async () => {
         await shell.openExternal(process.env.HYDRA_HOMEPAGE)
       }
     },
-    'modal:tac': {
+    'link:tac': {
       'id': 'showTac',
       'label': i18n.string('system-menu.terms-and-conditions', lang),
       'click': async () => {
         await shell.openExternal(`${process.env.HYDRA_HOMEPAGE}/en/terms-and-conditions`)
       }
     },
-    'modal:pp': {
+    'link:pp': {
       'id': 'showPp',
       'label': i18n.string('system-menu.privacy-policy', lang),
       'click': async () => {
         await shell.openExternal(`${process.env.HYDRA_HOMEPAGE}/en/privacy-policy`)
       }
     },
-    'modal:attributions': {
+    'modal:openSource': {
       'id': 'showAttributions',
-      'label': i18n.string('system-menu.attributions', lang), 
+      'label': i18n.string('system-menu.open-source', lang), 
       'click': () => {
-        announce({'action': 'show-attributions'})
+        announce({'action': 'show-open-source'})
       }
     }
   }
